@@ -1,0 +1,1 @@
+Tự định nghĩa ra 1 thư viện validator để người khác có thể sử dụng chính cái thư viện mà mình tạo ra

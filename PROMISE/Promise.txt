@@ -1,0 +1,150 @@
+- Sync: Đồng bộ
+- Async: Bất đồng bộ
+ 
+ + Đồng bộ: Thằng nào viết trước chạy trước thằng nào viết sau chạy sau
+ + Bất đồng bộ: Thằng A được viết trước thằng B được viết sau nhưng khi chạy thì thằng B được chạy trước thằng A được
+   chạy sau. Không biết khi nào chạy xong thì gọi là bất đồng bộ
+   Async (bất đồng bộ) thường bao gồm setTimeout, setInterval, fetch, XMLHttpRequest, file reading, 
+   request animation frame...
+
+VD: 
+Hàm này có thể hiểu là sleep. Khi đoạn mã chạy đến đây nó sẽ ngủ 1s không in ra gì cả. 
+setTimeout(function(){
+     console.log(1);
+},1000)
+
+console.log(2)
+--> Theo tư duy đồng bộ thì thằng số 1 phải in ra trước còn thằng số 2 phải in ra sau. 
+Nhưng kết quả ở đây là 2 chạy trước 1 chạy sau (Bất đồng bộ) (vì thằng 1 ngủ 1s mới chạy)
+
+Callback hell: Có nghĩa là callback lồng callback. Tại sao lại có callback hell.
+Giờ ta sẽ vd mỗi callback là 1 tác vụ. VD ta có 1 function hell bên trong có 3 callback.
+Tác vụ số 1 phải thực thi xong thì thằng tác vụ 2 mới được chạy (Bởi vì để chạy được thằng thứ 2 
+nó phải có dữ liệu trả về từ thằng thứ 1). Thằng số 3 để nó chạy được lại cần dữ liêu trả 
+về từ thằng thứ 2. Các tác vụ phải chờ để chạy tuần tự
+
+VD:
+setTimeout(function(){
+    console.log(1); //Việc 1
+    setTimeout(function(){
+        console.log(2); //Việc 2
+        setTimeout(function(){
+            console.log(3); //Việc 3
+            setTimeout(function(){
+                console.log(4); //Việc 4
+            },1000)
+        },1000)
+    },1000)
+},1000)
+
+--> Đó là lí do Promise ra đời để giải quyết vấn đề callback hell
+
+- Promise sẽ nhận vào constructor là 1 function
+var promise = new Promise(
+    // Executor (thực thi) --> Khi mà chúng ta gọi new Promise ngay lập tức sau đó 
+    // nó sẽ gọi function Executor. Nó sẽ gọi đến function này đến trước cả khi chúng ta
+    // nhận được biến promise
+    // Hàm Executor trong promise luôn nhận vào 2 hàm (function) là resolve và reject
+    function(resolve, reject){ // resolve có nghĩa là thành công. reject có nghĩa là thất bại
+        // Logic
+        // Thành công: resolve()
+        // Thất bại: reject()
+        resolve([
+            {
+                id: 1,
+                name: "Ruby"
+            },
+            {
+                id: 2,
+                name: "C#"
+            }
+        ]);
+
+        // reject("Có lỗi xảy ra");
+    }
+);
+
+promise
+    .then(function(courses){
+        console.log(courses);
+        console.log("Successfully");
+    })
+    .catch(function(errors){
+        console.log(errors);
+        console.log("Failure");
+    })
+    .finally(function(){
+        console.log("Done");
+    })
+
+// Những callback trong các hàm then,catch,finally được thực thi khi:
+// - Nếu resolve được gọi thì callback của then được gọi
+// - Nếu reject được gọi thì callback của catch được gọi
+// - Nếu 1 trong 2 thằng resolve hoặc reject được gọi thì callback của finally luôn luôn được gọi
+
+// Promise thường có 3 trạng thái
+// 1) Pendding: Đang chờ (nếu nó không resolve hoặc reject thì nó đang ở trạng thái pedding).
+//              Đây là trạng thái rò rỉ bộ nhớ
+// 2) Fullfilled: Trạng thái thành công
+// 3) Rejected: Trạng thái thất bại
+
+// Các luồng dữ liệu này phụ thuộc vào nhau nghĩa là các thằng .then phụ thuộc nhau
+// Nếu mà 1 thằng .then return ra 1 Promise thì cái thằng .then liền kề sẽ phải chờ cái Promise này giải quyết xong
+// thì nó mới chạy.
+
+// function sleep(ms)
+// {
+//     return new Promise(function(resolve){
+//         setTimeout(resolve,ms);
+//     });
+// };
+
+// sleep(1000)
+//     .then(function(){
+//         console.log(1);
+//         return sleep(1000);
+//     })
+//     .then(function(){
+//         console.log(2);
+//         return sleep(1000);
+//     })
+//     .then(function(){
+//         console.log(3);
+//         return sleep(1000);
+//     })
+
+// Lưu ý nếu 1 trong 3 thằng .then trên 1 thằng bị lỗi thì các thằng sau sẽ không chạy. VD thằng .then 2 bị lỗi thì
+// sau khi chạy thằng .then 1 đến thằng .then 2 bị lỗi thì thằng .then 3 sẽ không chạy.
+
+// Nếu các luồng chạy promise không phụ thuộc vào nhau nhưng tuy nhiên ta vẫn muốn lấy kết quả của các luồng này làm 
+// việc với nhau thì ta có thể chạy song song các thằng này bằng cách dùng Promise.all
+
+var promise_1 = new Promise(function(resolve){
+    setTimeout(function(){
+        resolve(["Nguyễn Trung Kiên"]);
+    },2000);
+});
+
+var promise_2 = new Promise(function(resolve){
+    setTimeout(function(){
+        resolve(["Yêu"]);
+    },4000);
+});
+
+var promise_3 = new Promise(function(resolve){
+    setTimeout(function(){
+        resolve(["Ngô Nguyễn Phong My"]);
+    },6000);
+});
+
+// Nếu ta dùng .then chạy tuần tự từng thằng  thì sẽ mất tổng cộng 12s. Nhưng nếu dùng Promise.all thì sẽ chỉ mất 6s.
+// Sau 6s nó mới chạy đồng thời 1 lúc 3 thằng chứ không phải hết 2s ra thằng 1, 4s ra thằng 2, 6s ra thằng 3 
+// Nếu mà các luồng không phụ thuộc nhau thì nên chạy song song đồng thời
+
+Promise.all([promise_1,promise_2,promise_3])
+    .then(function(result){
+        console.log(result);
+    })
+
+// Mặc dù các promise không phụ thuộc nhau nhưng tất cả cùng phải xong việc (thành công) thì nó mới chạy. Chỉ cần 1 
+// thằng hỏng sẽ thất bại 

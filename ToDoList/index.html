@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Todo List</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
+        integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj"
+        crossorigin="anonymous"></script>
+    <style type="text/css">
+        body {
+            font-family: 'Oswald', sans-serif;
+        }
+
+        .completed {
+            text-decoration: line-through;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h3 style="text-align: center;text-transform: uppercase;font-size: 20px">My Todo List</h3>
+        <div class="col-md-6">
+            <form>
+                <input type="text" class="form-control" id="input_value">
+                <input type="submit" id="btn_todo" class="btn btn-sm btn-primary" value="Thêm" style="margin:5px 0"><br>
+                <div class="select">
+                    <select id="select_todo" class="form-control">
+                        <option value="tatca">Tất cả công việc</option>
+                        <option value="hoanthanh">Hoàn thành</option>
+                        <option value="chuahoanthanh">Chưa hoàn thành</option>
+                    </select>
+                </div>
+            </form>
+            <div class="todo-container">
+                <ul id="list-todo"></ul>
+                <!-- Phải để thẻ ul nằm cùng hàng bởi vì nếu ta xuống thẻ ul nó sẽ tạo ra 1 khoảng trống mà 1 khoảng trống (dòng trống) nó cũng sẽ tính là DOM-->
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+    crossorigin="anonymous"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <!-- Đoạn script phải nằm trong body -->
+</body>
+
+</html>

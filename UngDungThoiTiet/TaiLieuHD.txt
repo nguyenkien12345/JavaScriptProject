@@ -1,0 +1,8 @@
+1) Vào google -> home.openweathermap.org -> API keys -> Create key (Đặt tên bất kì: weather-app) -> Generate -> Lấy API key (cb8b4de59a5f1eb403da5e70687ae330)
+Coi tài liệu sử dụng trong https://openweathermap.org/current
+Vào đây để lấy icon https://openweathermap.org/weather-conditions
+2) Để Deploy website lên online thì ta gõ: npm i -g surge -> Sau đó gõ chữ surge (nếu nhập lần đầu nó sẽ yêu cầu email,mk) 
+-> Chọn đường dẫn project -> Chọn đường dẫn domain ta muốn (vd: html-surge-dem.surge.sh)
+3) Do khi deploy lên web (Nó chỉ đưa lên 3 file là html, css, js). 
+Nên khi muốn đưa 1 proeject như Angular hay React lên thì phải làm như sau. 
+npm run build -> cd build -> surge

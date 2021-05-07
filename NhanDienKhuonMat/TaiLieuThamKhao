@@ -1,0 +1,1 @@
+github.com/justadudewhohacks/face-api.js -> Sau khi tải về giải nén -> Vào dist -> copy 2 thằng face-api.js và face-api.min.js vào project của mình -> Sau đó copy tiếp folder weights qua project của mình (rename lại là models)

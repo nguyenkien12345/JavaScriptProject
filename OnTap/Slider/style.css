@@ -1,0 +1,42 @@
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('images/HUONG.jpg')left/cover no-repeat;
+}
+
+.images{
+    flex: 0 0 80%;
+    min-height: 70vh;
+    background: url('images/HUONG.jpg')center/cover no-repeat;
+    border-radius: 15px;
+    box-shadow: 5px 10px black;
+    position: relative;
+    z-index: 10;
+}
+
+.btn{
+    width: 80px;
+    height: 80px;
+    background: white !important;
+    color: black;
+    border: 3px solid red !important;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    border-radius: 40px !important;
+    top: 50%;
+    position: absolute;
+    cursor: pointer;
+    z-index: 20;
+}
+
+.nextBtn{
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.prevBtn{
+    left: 0;
+    transform: translateY(-50%);
+}

@@ -1,0 +1,23 @@
+Value types => Kiểu tham trị
+Reference types => Kiểu tham chiếu
+
+Chia làm 2 kiểu dữ liệu 
+
+1: Value types (Primitive data types) (Kiểu dữ liệu nguyên thuỷ, kiểu dữ liệu đơn giản)
+    - String
+    - Number
+    - Boolean
+    - BigInt
+    - Symbol
+    - Undefined
+    - Null 
+=> Tại 1 thời điểm nó chỉ lưu 1 giá trị (vd như Boolean thì khi đã lưu giá trị là true thì không thể lưu kiểu giá trị là false được tại cùng 1 thời điểm)
+
+2: Reference types (Non-primitive data types) (Kiểu dữ liệu không nguyên thuỷ, kiểu dữ liệu phức tạp)
+    - Object
+    - Array
+    - Function
+
+Data types with functions
+    - Value types
+    - Reference types

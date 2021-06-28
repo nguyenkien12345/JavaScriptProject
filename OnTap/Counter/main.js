@@ -6,8 +6,8 @@
     let count = 0;
 
     // Chuyển buttons thành cái mảng sau đó duyệt qua từng phần tử trong mảng, mỗi cái btn trong mảng sẽ thực hiện 1 function
-    Array.from(buttons).forEach(function(btn){
-        btn.addEventListener("click", function(e){
+    Array.from(buttons).forEach(btn =>  {
+        btn.addEventListener("click", (e) => {
             if(e.target.classList.contains("nextBtn"))
             {
                 count++;

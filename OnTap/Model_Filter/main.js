@@ -1,18 +1,18 @@
-const name_items = document.querySelectorAll(".name_item");
-const prices = document.querySelectorAll(".price");
-const element_cakes = document.querySelectorAll(".element_cakes");
+const name_items = document.querySelectorAll(".name_item");                 // Toàn bộ các thẻ tên sản phẩm
+const prices = document.querySelectorAll(".price");                         // Toàn bộ các thẻ giá sản phẩm
+const element_cakes = document.querySelectorAll(".element_cakes");          // Toàn bộ các thẻ div bọc ảnh, tên sản phẩm, giá sản phẩm
 
-const search_item = document.querySelector("#search-item");
-const filter_buttons = document.querySelectorAll("#filter_button .btn");
+const search_item = document.querySelector("#search-item");                 // Thanh tìm kiếm
+const filter_buttons = document.querySelectorAll("#filter_button .btn");    // Các nút lọc sản phẩm
 
-const show = document.querySelector("#showtext");
+const show = document.querySelector("#showtext");                           // Hiển thị thông báo tìm thấy sản phẩm
 
-const modal = document.querySelector("#modal");
-const imgBox = document.querySelector(".lightbox");
+const modal = document.querySelector("#modal");                             // Khi click vào ảnh hiển thị lên
+const imgBox = document.querySelector(".lightbox");                         // Hiển thị ảnh
 
-const cancel = document.querySelector(".fa-window-close");
-const next = document.querySelector(".fa-caret-right");
-const prev = document.querySelector(".fa-caret-left");
+const cancel = document.querySelector(".fa-window-close");                  // Nút huỷ 
+const next = document.querySelector(".fa-caret-right");                     // Nút kế tiếp
+const prev = document.querySelector(".fa-caret-left");                      // Nút lùi lại
 
 const arrImg = ['cake-1','cake-2','cake-3','cupcake-1','cupcake-2','cupcake-3','doughnut-1','doughnut-2','doughnut-3','sweets-1','sweets-2','sweets-3'];
 

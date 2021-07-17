@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    a {
+        display: block;
+    }
+
+    ul {
+        list-style: none;
+        display: none;
+    }
+
+    input:focus ~ ul {
+        display: block;
+    }
+</style>
+
+<body>
+    
+    <a href="https://www.liverpoolfc.com/">Liverpool FC</a>
+    <a href="https://www.chelseafc.com/">Chelsea FC</a>
+
+    <!-- preventDefault() -->
+    <input type="text" placeholder="Enter Your Text: " id="txt"/>
+    <ul>
+        <li>PHP</li>
+        <li>JAVASCRIPT</li>
+        <li>C++</li>
+        <li>REACT</li>
+    </ul>
+    <!--  -->
+
+    <!-- stopPropagation -->
+    <!-- 
+        Để ngăn chặn hành vi nổi bọt, hành vi lan truyền. Vd khi ta click vào button Click Me, ta chỉ muốn nó hiển thị mỗi chữ CLICK ME
+        nhưng bởi vì sự nổi bọt lan truyền từ thẻ con đến thẻ cha thẻ ông nội thì nó sẽ in ra cả chữ NTK và chữ CLICK ME luôn. Đó là lí do 
+        ta cần sự kiện stopPropagation  
+    -->
+    <div>
+        NTK
+        <button>Click Me</button>
+    </div>
+    <!--  -->
+
+<script src="./index.js"></script>
+</body>
+</html>

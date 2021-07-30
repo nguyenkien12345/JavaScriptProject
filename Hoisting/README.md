@@ -1,0 +1,1 @@
+- HOISTING mang ý nghĩa là đưa lên trên hay là kéo lên trên. Khi nhắc đến HOISTING trong Js là người ta đang đề cập đến việc khai báo biến, khai báo hàm. Cái phần khai báo sẽ được đưa lên trên đầu phạm vi của chúng.

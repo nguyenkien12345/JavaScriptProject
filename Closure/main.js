@@ -15,7 +15,7 @@ console.log(counter_example());           // Kết quả: 2
 console.log(counter_example());           // Kết quả: 3 
 
 // Kết luận
-// + counter_example => Chính là hàm increase được tạo ra trong chính createCounter. Ở đây ta gọi hàm createCounter() 1 lần nên chỉ có 1 phạm vi được tạo ra
+// + counter_example => Chính là hàm increase được tạo ra trong chính createCounter(). Ở đây ta gọi hàm createCounter() 1 lần nên chỉ có 1 phạm vi được tạo ra
 // 1   => Đi đến hàm increase gọi vào thằng counter mà thằng counter không nằm trong phạm vi hàm increase nên nó nhảy ra bên ngoài để tìm sau đó lấy biến counter này tăng lên 1
 // 2,3 => Xử lý logic như trên nhưng vì nó cùng phạm vi của biến createCounter được tạo ra tức là chỉ có 1 phạm vi mà trước đó biến counter này đã tăng lên 1 nên lúc này tăng lên nữa sẽ là 2. (3 tương tự)
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 

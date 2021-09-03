@@ -1,6 +1,6 @@
+const element_cakes = document.querySelectorAll(".element_cakes");          // Toàn bộ các thẻ div bọc ảnh, tên sản phẩm, giá sản phẩm
 const name_items = document.querySelectorAll(".name_item");                 // Toàn bộ các thẻ tên sản phẩm
 const prices = document.querySelectorAll(".price");                         // Toàn bộ các thẻ giá sản phẩm
-const element_cakes = document.querySelectorAll(".element_cakes");          // Toàn bộ các thẻ div bọc ảnh, tên sản phẩm, giá sản phẩm
 
 const search_item = document.querySelector("#search-item");                 // Thanh tìm kiếm
 const filter_buttons = document.querySelectorAll("#filter_button .btn");    // Các nút lọc sản phẩm

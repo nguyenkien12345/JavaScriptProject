@@ -2,26 +2,26 @@ let productsElement = document.querySelector('.products');
 
 let countElement = document.querySelector('.count');
 
-let subTotalElement = document.querySelector('.subtotal span');
-let vatElement = document.querySelector('.vat span');
-let totalElement = document.querySelector('.total span');
+let subTotalElement = document.querySelector('.subtotal span');     // Tổng tiền các sản phẩm chưa bao gồm Vat và Discount
+let vatElement = document.querySelector('.vat span');               // Phí VAT
+let totalElement = document.querySelector('.total span');           // Tổng tiền các sản phẩm bao gồm Vat và Discount
 
-let inputPromotion = document.querySelector('#promo-code');
+let inputPromotion = document.querySelector('#promo-code');         // Nhập mã Discount
 
-let discount = document.querySelector('.discount');
-let discountElement = document.querySelector('.discount span');
+let discount = document.querySelector('.discount');                 // Giảm giá discount
+let discountElement = document.querySelector('.discount span');     // Hiển thị giảm giá discount
 
-let btnPromotion = document.querySelector('.promotion button');
+let btnPromotion = document.querySelector('.promotion button');     // Nút áp dụng giảm giá 
 
 
 // Random id ngẫu nhiên trong khoảng 0 -> 100000
 function randomId() {
-    return Math.floor(Math.random() * 100000);
+    return Math.floor(Math.random() * 100000);    
 }
 
 // Chuyển số thành tiền VND 
 function convertMoney(num) {
-    return num.toLocaleString('it-IT', { style: 'currency', currency: 'VND' });
+    return num.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' });
 }
 
 // Danh sách sản phẩm

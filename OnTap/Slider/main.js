@@ -1,6 +1,6 @@
 const images = document.querySelector(".images");
-const next   = document.querySelector(".nextBtn");
 const prev   = document.querySelector(".prevBtn");
+const next   = document.querySelector(".nextBtn");
 
 let count = 0;
 

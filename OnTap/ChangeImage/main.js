@@ -1,8 +1,8 @@
-const button_generate = document.querySelector(".btn.generate");
+const img_quote = document.querySelector(".imgQuote");
 
 const quote_text = document.querySelector(".quote_text");
 
-const img_quote = document.querySelector(".imgQuote");
+const button_generate = document.querySelector(".btn.generate");
 
 const arrUser = {
     "NAME": ["KIEN","MY","LIEN","NHI","TRAN","PHUONG","NGUYET"],
@@ -20,9 +20,6 @@ function randomIndex(arr){
 }
 
 function changeQuete(){
-    // arrUser['NAME'] => Lấy ra key NAME
-    // [randomIndex(arrUser.NAME)] (cách khác: randomIndex(arrUser['NAME'])])=> Lấy ra index bất kì của key NAME
-    // VD => vd array[1]
     const person = arrUser['NAME'][randomIndex(arrUser['NAME'])];
     img_quote.src = `images/${person}.jpg`
     quote_text.innerHTML = arrUser[person]

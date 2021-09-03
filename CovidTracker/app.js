@@ -2,8 +2,7 @@ getCovidWorld();
 getCovidCountry();
 getSelectWorld();
 
-// addEventListener Lắng nghe sự kiện
-// console.log(e.target.value); kiểm tra xem có in ra id khi click vào option không
+
 const btnSelect = document.getElementById("select_world");
 btnSelect.addEventListener("click",getCountryById);
 

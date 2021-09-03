@@ -1,0 +1,23 @@
+body {
+    max-width: 960;
+    margin: 30px auto;
+    padding: 0px 0px 0px 20px;
+    display: flex;
+}
+
+label {
+    float: left;
+    width: 90px;
+}
+
+div {
+    margin-bottom: 10px;
+}
+
+span.error{
+    color: red;
+}
+
+.user-list{
+    margin-left: 100px;
+}

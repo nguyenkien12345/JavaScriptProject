@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Quản lý sinh viên</title>
+</head>
+<body>
+    <div class="form-student">
+        <h3>Thông tin sinh viên</h3>
+
+        <label for="fullname">Họ và tên</label>
+        <input type="number" name="id" id="id" value="" hidden/>
+        <input type="text" name="fullname" id="fullname" placeholder="Enter Your Name: "/>
+        <span id="fullname_error" class="error"></span>
+        <br/>
+
+        <label for="email">Địa chỉ email</label>
+        <input type="text" name="email" id="email" placeholder="Enter Your Email: "/>
+        <span id="email_error" class="error"></span>
+        <br/>
+
+        <label for="phone">Số điện thoại</label>
+        <input type="text" name="phone" id="phone" placeholder="Enter Your Phone: "/>
+        <span id="phone_error" class="error"></span>
+        <br/>
+
+        <label for="address">Địa chỉ</label>
+        <input type="text" name="address" id="address" placeholder="Enter Your Address: "/>
+        <span id="address_error" class="error"></span>
+        <br/>
+
+        <label>Giới tính</label>
+        <input type="radio" name="gender" id="male"   value="1"/> Nam
+        <input type="radio" name="gender" id="female" value="2"/> Nữ
+        <span id="gender_error" class="error"></span>
+        <br/>
+
+        <button class="btn" onclick="save()">Thêm</button>
+    </div>
+
+    <div class="list-student">
+        <h3>Danh sách sinh viên</h3>
+        <table border="1" cellpadding="0" cellspacing="0">
+            <tr>
+                <td>STT</td>
+                <td>Họ và tên</td>
+                <td>Giới tính</td>
+                <td>Email</td>
+                <td>Điện thoại</td>
+                <td>Địa chỉ</td>
+                <td>Hành động</td>
+            </tr>
+            <tbody id="table-student"></tbody>
+        </table>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src='./js/app.js'></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.form-student, .list-student{
+    width: 700px;
+    margin: 25px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: aquamarine;
+    float: left
+}
+
+.list-student{
+    width: 700px;
+    background-color: lightyellow;
+}
+
+.list-student h3{
+    padding: 10px 0px;
+    margin: 5px 0px;
+}
+
+.form-student h3{
+    padding: 0px;
+    margin-top: 0px;
+}
+
+.form-student label{
+    width: 150px;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.form-student input[type="text"]{
+    width: 250px;
+    padding: 5px;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+}
+
+.form-student .btn{
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 5px;
+    margin-top: 20px;
+    background-color: blueviolet;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 1px 2px 5px lightcoral;
+}
+
+span.error{
+    margin-left: 5px;
+    color: red;
+}

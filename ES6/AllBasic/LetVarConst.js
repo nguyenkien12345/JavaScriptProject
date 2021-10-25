@@ -16,10 +16,10 @@
 }
 console.log(linh);
 
-// Hosting (Chỉ có var hỗ trợ Hosting còn let và const thì không). Nó sẽ tự kiếm code được định nghĩa khai báo (var a) và đưa lên đầu chuyển thành var a = 1;
-a = 1;
-var a;
-console.log(a)
+// Hosting (Chỉ có var hỗ trợ Hosting còn let và const thì không). Nó sẽ tự kiếm code được định nghĩa khai báo (var x) và đưa lên đầu đoạn chuyển thành var x = 1;
+x = 1;
+var x;
+console.log(x)
 
 // Assignment let và var có thể thay đổi giá trị bằng cách sử dụng toán tử gán lần thứ 2, còn const thì không
 let a = 100;

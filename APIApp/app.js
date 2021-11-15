@@ -6,25 +6,23 @@ btn.addEventListener("click",getMeal);
 
 function getMeal(e){
   e.preventDefault();
-  input_value = input.value;
+  var input_value = input.value;
   document.getElementById("title").innerText = 'Công thức tìm kiếm từ:' + ' ' + input.value;
   fetchDataAPI(input_value);
 }
 
 async function fetchDataAPI(input_value){
-  app_id = '24270fcf';
-  app_key = '9c8b546d8fefe29384d4e2e11755885e';
+  var app_id = '24270fcf';
+  var app_key = '9c8b546d8fefe29384d4e2e11755885e';
   baseURI = `https://api.edamam.com/search?q=${input_value}&app_id=${app_id}&app_key=${app_key}`;
-  result = await fetch(baseURI);
-  console.log("Result",result);
-  recipes = await result.json();
-  console.log("Recipes",recipes);
+  var result = await fetch(baseURI);
+  var recipes = await result.json();
   createHTML(recipes.hits);
 }
 
 function createHTML(data){
 	console.log(data);
-	showHtml = '';
+	var showHtml = '';
 	data.map(result => {
 		showHtml+= `<li>
 					<img width="100%" src="${result.recipe.image}">
@@ -37,5 +35,6 @@ function createHTML(data){
 	})
 	document.querySelector(".li_recipe").innerHTML = showHtml;
 }
+
 //toFixed(2) Làm tròn 2 kí tự
 //target="_blank" mở cửa sổ mới

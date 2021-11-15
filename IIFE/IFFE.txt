@@ -1,23 +1,23 @@
-// Function Expression
-// const callNow = function() {
-//     console.log('NOW')
-// }
-// callNow();
-// Đây chưa phải là 1 IIFE vì chúng ta định nghĩa ra 1 Function Expression ở bên trên và gọi ở bên dưới. 
-// Trong khi IIFE là phải gọi ngay lập tức
+Function Expression
+const callNow = function() {
+    console.log('NOW')
+}
+callNow();
++ Đây chưa phải là 1 IIFE vì chúng ta định nghĩa ra 1 Function Expression ở bên trên và gọi ở bên dưới
++ Trong khi IIFE là phải gọi ngay lập tức
 
-//VD: IIFE không có tham số
-// (function() {
-//     console.log("NGUYỄN TRUNG KIÊN")
-// })()
-// Giải thích 
-// (function(){
-// }) 
-// --> Đây là 1 cái hàm
-// ()
-//--> Cặp () chính là dùng để gọi hàm
+VD: IIFE không có tham số
+(function() {
+    console.log("NGUYỄN TRUNG KIÊN")
+})()
+Giải thích 
+(function(){
+}) 
+-> Đây là 1 cái hàm
+()
+-> Cặp () chính là dùng để gọi hàm
 
-//VD: IIFE có tham số
-// (function(message) {
-//     console.log("Hello: ", message)
-// })('Nguyễn Trung Kiên')
+VD: IIFE có tham số
+(function(message) {
+    console.log("Hello: ", message)
+})('Nguyễn Trung Kiên')

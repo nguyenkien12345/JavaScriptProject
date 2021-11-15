@@ -1,0 +1,33 @@
+body{
+    font-family: 'Rubik', sans-serif;
+    background: rgb(26, 26, 27);
+}
+h3.title_recipe {
+    text-align: center;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+}
+form.search-form {
+    width: 60%;
+    display: block;
+    margin: 0 auto;
+}
+ul.list_food {
+    list-style: none;
+}
+ul.list_food li {
+    border: 1px solid #fff;
+    width: 23%;
+    float: left;
+    padding: 10px;
+    margin:10px;
+    color: #fff;
+    padding: 10px; 
+    height: 630px;
+    overflow: hidden;
+}
+.li_recipe span {
+    color: orangered;
+    font-weight: bold;
+}

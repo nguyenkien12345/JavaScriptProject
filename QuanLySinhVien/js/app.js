@@ -101,6 +101,7 @@ function save(){
         if(id != ''){
             //gán giá trị mới
             dssv[id] = sinhVien;
+            localStorage.setItem("dssv",JSON.stringify(dssv));
             renderUI();
             return;
         }
@@ -136,7 +137,14 @@ function editStudent(id){
             document.getElementById("email").value=sinhvien.email;
             document.getElementById("phone").value=sinhvien.phone;
             document.getElementById("address").value=sinhvien.address;
-            document.getElementById("gender").value=sinhvien.gender
+            if(sinhvien.gender === "Nam"){
+                document.getElementById("male").checked = true;
+                document.getElementById("female").checked = false;
+            }
+            else if(sinhvien.gender === "Nữ"){
+                document.getElementById("male").checked = false;
+                document.getElementById("female").checked = true;
+            }
     }
 };
 

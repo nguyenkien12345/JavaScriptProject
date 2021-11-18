@@ -20,7 +20,7 @@ Nhưng kết quả ở đây là 2 chạy trước 1 chạy sau (Bất đồng b
 Callback hell: Có nghĩa là callback lồng callback. Tại sao lại có callback hell.
 Giờ ta sẽ vd mỗi callback là 1 tác vụ. VD ta có 1 function hell bên trong có 3 callback.
 Tác vụ số 1 phải thực thi xong thì thằng tác vụ 2 mới được chạy (Bởi vì để chạy được thằng thứ 2 
-nó phải có dữ liệu trả về từ thằng thứ 1). Thằng số 3 để nó chạy được lại cần dữ liêu trả 
+nó phải có dữ liệu trả về từ thằng thứ 1). Thằng số 3 để nó chạy được lại cần dữ liệu trả 
 về từ thằng thứ 2. Các tác vụ phải chờ để chạy tuần tự
 
 VD:

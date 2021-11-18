@@ -17,7 +17,6 @@ var users = [
         id: 4,
         name: 'Hong Quan'
     }
-    //...
 ]
 
 var comments = [
@@ -36,7 +35,6 @@ var comments = [
         user_id: 3,
         content: 'Gia Linh Thich Kien'
     },
-    //...
 ]
 
 // 1. Lấy comments

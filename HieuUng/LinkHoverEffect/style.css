@@ -1,0 +1,62 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+body,
+input,
+button,
+textarea,
+select {
+  outline: none;
+  font-size: 12px;
+  line-height: 1.5;
+  font-family: "Poppins", sans-serif;
+}
+
+input {
+  line-height: normal;
+}
+
+button {
+  cursor: pointer;
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0px;
+}
+
+.menu-item{
+    display: inline-block;
+    margin: 0px 25px;
+}
+
+.menu-link{
+    display: inline-block;
+    color: black;
+    position: relative;
+}
+
+.line-effect{
+  width: 0;
+  height: 2px;
+  background-color:#3de6f7;
+  position: fixed;      /* Vì line chạy theo những phần tử nên ta để fixed */
+  pointer-events: none; /* Không cho người dùng click vào */
+  transition: all 0.25s linear;
+}

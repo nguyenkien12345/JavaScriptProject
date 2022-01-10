@@ -1,3 +1,4 @@
+// // ----------------------------- Reducer  -----------------------------
 var courses = [
     {
         id: 1,
@@ -27,17 +28,17 @@ var courses = [
 ]
 
 // Cách 1
-// function total_Coins(){
-//     var totalCoins = 0;
-//     for(var course of courses){
-//         totalCoins += course.coin;
-//     }
-//     console.log(totalCoins);
-// }
+function total_Coins(){
+    var totalCoins = 0;
+    for(var course of courses){
+        totalCoins += course.coin;
+    }
+    console.log(totalCoins);
+}
 
-// total_Coins();
+total_Coins();
 
 // Cách 2
 // Sử dụng reducer (0 là giá trị khởi tạo mặc định ban đầu, course là từng khoá học (ban đầu có coin là 0 sau đó sẽ cộng dồn lần lượt lên))
-// var total_Coins = courses.reduce((course, courseCoin) => course + courseCoin.coin, 0 )
-// console.log(total_Coins)
+var total_Coins = courses.reduce((course, courseCoin) => course + courseCoin.coin, 0 )
+console.log(total_Coins)

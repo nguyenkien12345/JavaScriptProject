@@ -25,10 +25,3 @@ const course = {
         // this có nghĩa là context
     }
 }
-
-logger("Nguyen Trung Kien");
-sayHello("Phong My");
-console.log(sum(5, 10));
-console.log(minus(5, 10));
-console.log(obj);
-console.log(course.getName());

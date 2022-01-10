@@ -1,3 +1,4 @@
+// ----------------------------- Enhanced_object_literals  -----------------------------
 // 1 Định nghĩa key: value cho object
 // 2 Định nghĩa method cho object
 // 3 Định nghĩa key cho object dưới dạng biến
@@ -15,5 +16,3 @@ var user = {
         return price;
     }
 }
-
-console.log(user);

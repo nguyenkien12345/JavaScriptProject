@@ -9,8 +9,7 @@ var courses = [
 Array.prototype.forEachFunction = function(callback){
     // this chính là array
     for(var index in this){
-        // Chỉ duyệt qua những phần tử nằm trong mảng không duyệt qua những phần tử trong prototype của mảng đó. Khi ta định nghĩa 1 phương thức 
-        // nào đó bằng prototype thì nó sẽ được đưa vào prototype của mảng đó. 
+        // Chỉ duyệt qua những phần tử nằm trong mảng không duyệt qua những phần tử trong prototype của mảng đó. Khi ta định nghĩa 1 phương thức nào đó bằng prototype thì nó sẽ được đưa vào prototype của mảng đó. 
         if(this.hasOwnProperty(index))
         {
             callback(this[index],index,this)
@@ -47,8 +46,7 @@ Array.prototype.filterFunction = function(callback){
     var output = [];
     // this chính là array
     for(var index in this){
-        // Chỉ duyệt qua những phần tử nằm trong mảng không duyệt qua những phần tử trong prototype của mảng đó. Khi ta định nghĩa 1 phương thức 
-        // nào đó bằng prototype thì nó sẽ được đưa vào prototype của mảng đó. 
+        // Chỉ duyệt qua những phần tử nằm trong mảng không duyệt qua những phần tử trong prototype của mảng đó. Khi ta định nghĩa 1 phương thức nào đó bằng prototype thì nó sẽ được đưa vào prototype của mảng đó. 
         if(this.hasOwnProperty(index)){
             var result = callback(this[index], index, this);
             // result chính là điều kiện (Condition)
@@ -95,8 +93,7 @@ Array.prototype.someFunction = function(callback){
     var output = false;
     // this chính là array
     for(var index in this){
-        // Chỉ duyệt qua những phần tử nằm trong mảng không duyệt qua những phần tử trong prototype của mảng đó. Khi ta định nghĩa 1 phương thức 
-        // nào đó bằng prototype thì nó sẽ được đưa vào prototype của mảng đó. 
+        // Chỉ duyệt qua những phần tử nằm trong mảng không duyệt qua những phần tử trong prototype của mảng đó. Khi ta định nghĩa 1 phương thức nào đó bằng prototype thì nó sẽ được đưa vào prototype của mảng đó. 
         if(this.hasOwnProperty(index)){
             // Kiểm tra chỉ cần 1 thằng true là thoát luôn
             var result = callback(this[index], index, this);
@@ -121,8 +118,7 @@ Array.prototype.everyFunction = function(callback){
     var output = true;
     // this chính là array
     for(var index in this){
-        // Chỉ duyệt qua những phần tử nằm trong mảng không duyệt qua những phần tử trong prototype của mảng đó. Khi ta định nghĩa 1 phương thức 
-        // nào đó bằng prototype thì nó sẽ được đưa vào prototype của mảng đó. 
+        // Chỉ duyệt qua những phần tử nằm trong mảng không duyệt qua những phần tử trong prototype của mảng đó. Khi ta định nghĩa 1 phương thức  nào đó bằng prototype thì nó sẽ được đưa vào prototype của mảng đó. 
         if(this.hasOwnProperty(index)){
             // Kiểm tra chỉ cần 1 thằng false là thoát luôn
             var result = callback(this[index], index, this);

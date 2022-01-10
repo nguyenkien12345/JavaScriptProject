@@ -1,3 +1,4 @@
+// ----------------------------- Context với bind  -----------------------------
 var mouse = {
     name: 'Mickey',
     sayHi: function(){

@@ -13,6 +13,5 @@ function test(log, type='log'){
     console[type](log)
 }
 
-logger();
-show("Nguyen Kien", false);
+show("Nguyen Kien", true);
 test("Kien", 'warn')

@@ -2,16 +2,9 @@ var array = ["Liverpool","Chelsea","Real","Arsenal"];
 
 // Cách 1
 var [a,b,c,d] = array;
-console.log(a);
-console.log(b);
-console.log(c);
-console.log(d);
-
 // Cách 2
 // ...rest những phần tử còn lại trong mảng
 var [a,...rest] = array;
-console.log(a);
-console.log(rest); 
 
 var object = {
     name: "Javascript",
@@ -30,11 +23,10 @@ console.log(parentName, price, teacher, desc, name);
 
 //// ...params là toán tử Rest
 function logger(...params){
-    // Trả về mảng array
-    console.log(params);
+    console.log(params); // Trả về mảng array
 }
 
-console.log(logger(1,2,3,4,5,6,7,8,9,10))
+logger(1,2,3,4,5,6,7,8,9,10)
 
 //// Khi chúng ta biết đầu vào là 1 object và đầu ra ta muốn lẩy từng thuộc tính giá trị. // ...rest những phần tử còn lại trong mảng
 function loggerCT({name, age, gender, ...rest}){
